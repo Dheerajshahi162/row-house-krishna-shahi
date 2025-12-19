@@ -1,0 +1,246 @@
+/* RESET / BASE */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+.header {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ROW HOUSE TITLE */
+.header h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
+/* KRISHNA SHAHI - LOGO STYLE (SCREENSHOT LOOK) */
+.subtitle {
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-family: 'Arial Black', 'Impact', sans-serif;
+    text-transform: capitalize;
+    margin: 5px 0 10px;
+
+    color: #ffffff;
+
+    /* Black outline + red shadow */
+    text-shadow:
+        -3px -3px 0 #000,
+         3px -3px 0 #000,
+        -3px  3px 0 #000,
+         3px  3px 0 #000,
+         6px  6px 0 #e60000;
+}
+
+/* TAGLINE */
+.header p {
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    background: #34495e;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    padding: 14px 18px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background: #1abc9c;
+}
+
+/* ================= HERO ================= */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    color: white;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url("images/img1.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.price-banner {
+    background: #e74c3c;
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 32px;
+    font-weight: bold;
+    border-radius: 50px;
+    margin: 20px 0;
+}
+
+.price-banner span {
+    color: #ffe600;
+}
+
+.offer-text {
+    font-size: 16px;
+}
+
+/* ================= SECTIONS ================= */
+.section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.light {
+    background: #f4f4f4;
+}
+
+/* PREMIUM HEADINGS */
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.section h2::after {
+    content: "";
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, #c9a227, #ffd700);
+    display: block;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+/* TEXT */
+.section p {
+    max-width: 700px;
+    margin: 15px auto;
+    font-size: 17px;
+    color: #444;
+}
+
+/* FEATURES LIST */
+.section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section ul li {
+    background: #ecf0f1;
+    margin: 10px auto;
+    padding: 10px;
+    max-width: 420px;
+}
+
+/* ================= IMAGE SLIDER ================= */
+.slider {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider img {
+    width: 100%;
+    animation: slide 12s infinite;
+}
+
+@keyframes slide {
+    0%   {opacity: 1;}
+    20%  {opacity: 1;}
+    40%  {opacity: 0;}
+    60%  {opacity: 1;}
+    80%  {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* ================= VIDEOS ================= */
+.house-video {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* ================= ENQUIRY FORM ================= */
+.enquiry-form {
+    max-width: 400px;
+    margin: auto;
+}
+
+.enquiry-form input,
+.enquiry-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.enquiry-form button {
+    width: 100%;
+    padding: 12px;
+    background: #1abc9c;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.enquiry-form button:hover {
+    background: #16a085;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ================= WHATSAPP BUTTON ================= */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    line-height: 60px;
+    text-decoration: none;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .navbar a {
+        display: block;
+        border-bottom: 1px solid #444;
+    }
+
+    .price-banner {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 32px;
+    }
+}
