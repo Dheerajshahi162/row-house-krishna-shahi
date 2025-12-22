@@ -2,8 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Row House – Krishna Shahi</title>
+    <title>Krishna Shahi Row House | Lucknow</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Krishna Shahi Row House Lucknow. Premium 2 & 3 BHK Row Houses starting from 50 lakh.">
+    <meta name="keywords" content="Row House Lucknow, Krishna Shahi Row House">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,115 +19,129 @@
 <!-- HEADER -->
 <header class="header">
     <h1>Row House</h1>
-    <h3 class="subtitle">Krishna Shahi</h3>
+    <h2 class="subtitle">Krishna Shahi</h2>
     <p>Luxury • Comfort • Affordable Living</p>
 </header>
 
-<!-- NAVBAR -->
+<!-- NAV -->
 <nav class="navbar">
     <a href="#home">Home</a>
     <a href="#about">About</a>
-    <a href="#features">Features</a>
     <a href="#gallery">Gallery</a>
     <a href="#videos">Videos</a>
-    <a href="#enquiry">Enquiry</a>
     <a href="#contact">Contact</a>
 </nav>
 
 <!-- HERO -->
 <section id="home" class="hero">
-    <h2>Luxury Row House</h2>
-    <p>Premium row houses designed for modern family living</p>
+    <div class="hero-content">
+        <h3>Premium Row House in Lucknow</h3>
+        <p class="hero-subtext">
+            Krishna Shahi Row House – family ke liye perfect ghar  
+            jahan comfort, security aur shanti mile.
+        </p>
 
-    <div class="price-banner">
-        Only <span>50 Lakh</span>*
+        <div class="price-banner">
+            Starting From <span>₹50 Lakh*</span>
+        </div>
+
+        <div class="cta-buttons">
+            <a href="tel:7523805594" class="btn-primary">📞 Call Now</a>
+            <a href="#enquiry" class="btn-secondary">💬 WhatsApp</a>
+        </div>
     </div>
-
-    <p class="offer-text">
-        Limited Time Offer | Prime Location | Ready to Move
-    </p>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section light">
-    <h2>About Krishna Shahi Row House</h2>
+<section id="about" class="section">
+    <h3>About Krishna Shahi Row House</h3>
     <p>
-        Krishna Shahi Row House project offers thoughtfully designed homes
-        with modern architecture, quality construction, and a peaceful
-        environment — perfect for family living.
+        Krishna Shahi Row House Lucknow me located ek premium residential project hai
+        jo modern lifestyle aur peaceful living offer karta hai.
     </p>
 </section>
 
-<!-- FEATURES -->
-<section id="features" class="section">
-    <h2>Key Features</h2>
-    <ul>
-        <li>2 & 3 BHK Spacious Rooms</li>
-        <li>24x7 Water & Power Backup</li>
-        <li>Dedicated Parking Facility</li>
-        <li>Green & Peaceful Environment</li>
-        <li>Prime Location Connectivity</li>
-    </ul>
-</section>
-
-<!-- IMAGE SLIDER : 5 IMAGES -->
+<!-- ✅ PREMIUM GALLERY -->
 <section id="gallery" class="section light">
-    <h2>Project Gallery</h2>
+    <h3>Project Gallery</h3>
 
-    <div class="slider">
-        <img src="images/img1.jpeg" alt="Row House Image 1">
-        <img src="images/img2.jpeg" alt="Row House Image 2">
-        <img src="images/img3.jpeg" alt="Row House Image 3">
-        <img src="images/img4.jpeg" alt="Row House Image 4">
-        <img src="images/img5.jpeg" alt="Row House Image 5">
+    <div class="premium-gallery">
+        <!-- img1 to img27 -->
+        <img src="images/img1.jpeg" onclick="openLightbox(1)">
+        <img src="images/img2.jpeg" onclick="openLightbox(2)">
+        <img src="images/img3.jpeg" onclick="openLightbox(3)">
+        <img src="images/img4.jpeg" onclick="openLightbox(4)">
+        <img src="images/img5.jpeg" onclick="openLightbox(5)">
+        <img src="images/img6.jpeg" onclick="openLightbox(6)">
+        <img src="images/img7.jpeg" onclick="openLightbox(7)">
+        <img src="images/img8.jpeg" onclick="openLightbox(8)">
+        <img src="images/img9.jpeg" onclick="openLightbox(9)">
+        <img src="images/img10.jpeg" onclick="openLightbox(10)">
+        <img src="images/img11.jpeg" onclick="openLightbox(11)">
+        <img src="images/img12.jpeg" onclick="openLightbox(12)">
+        <img src="images/img13.jpeg" onclick="openLightbox(13)">
+        <img src="images/img14.jpeg" onclick="openLightbox(14)">
+        <img src="images/img15.jpeg" onclick="openLightbox(15)">
+        <img src="images/img16.jpeg" onclick="openLightbox(16)">
+        <img src="images/img17.jpeg" onclick="openLightbox(17)">
+        <img src="images/img18.jpeg" onclick="openLightbox(18)">
+        <img src="images/img19.jpeg" onclick="openLightbox(19)">
+        <img src="images/img20.jpeg" onclick="openLightbox(20)">
+        <img src="images/img21.jpeg" onclick="openLightbox(21)">
+        <img src="images/img22.jpeg" onclick="openLightbox(22)">
+        <img src="images/img23.jpeg" onclick="openLightbox(23)">
+        <img src="images/img24.jpeg" onclick="openLightbox(24)">
+        <img src="images/img25.jpeg" onclick="openLightbox(25)">
+        <img src="images/img26.jpeg" onclick="openLightbox(26)">
+        <img src="images/img27.jpeg" onclick="openLightbox(27)">
     </div>
 </section>
 
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">×</span>
+    <span class="nav prev" onclick="changeImage(-1)">❮</span>
+    <img id="lightbox-img">
+    <span class="nav next" onclick="changeImage(1)">❯</span>
+</div>
+
 <!-- VIDEOS -->
 <section id="videos" class="section">
-    <h2>Video Tour</h2>
+    <h3>Project Videos</h3>
 
-    <video class="house-video" controls>
+    <video controls class="house-video">
         <source src="videos/vid1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
     </video>
 
-    <video class="house-video" controls>
+    <video controls class="house-video">
         <source src="videos/vid2.mp4" type="video/mp4">
-        Your browser does not support the video tag.
     </video>
-</section>
 
-<!-- ENQUIRY -->
-<section id="enquiry" class="section light">
-    <h2>Enquiry Form</h2>
-
-    <form class="enquiry-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="tel" placeholder="Mobile Number" required>
-        <textarea placeholder="Your Message"></textarea>
-        <button type="submit">Submit Enquiry</button>
-    </form>
+    <video controls class="house-video">
+        <source src="videos/vid3.mp4" type="video/mp4">
+    </video>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section">
-    <h2>Contact Us</h2>
-    <p>📞 Phone: +91 7523805594</p>
-    <p>📍 Location: Lucknow, Uttar Pradesh</p>
+<section id="contact" class="section light">
+    <h3>Contact & Enquiry</h3>
+
+    <p>📞 +91 7523805594</p>
+    <p>📍 Lucknow, Uttar Pradesh</p>
+
+    <div id="enquiry" class="whatsapp-box">
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="tel" id="phone" placeholder="Mobile Number">
+        <button onclick="sendWhatsApp()">Send WhatsApp</button>
+    </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
-    <p>© 2025 Row House – Krishna Shahi. All Rights Reserved.</p>
+    © 2025 Krishna Shahi Row House
 </footer>
 
-<!-- WHATSAPP FLOAT BUTTON -->
-<a href="https://wa.me/918840535370?text=I%20am%20interested%20in%20Krishna%20Shahi%20Row%20House%20Only%2050%20Lakh"
-   class="whatsapp-float"
-   target="_blank">
-    💬
-</a>
+<a href="https://wa.me/917523805594" class="whatsapp-float">💬</a>
 
+<script src="script.js"></script>
 </body>
 </html>
