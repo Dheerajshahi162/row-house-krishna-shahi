@@ -1,246 +1,210 @@
-/* RESET / BASE */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+    color: #333;
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
 .header {
-    background: #2c3e50;
-    color: white;
     text-align: center;
-    padding: 50px 20px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg,#111,#000);
+    color: #fff;
 }
 
-/* ROW HOUSE TITLE */
 .header h1 {
-    margin: 0;
-    font-size: 40px;
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
 }
 
-/* KRISHNA SHAHI - LOGO STYLE (SCREENSHOT LOOK) */
 .subtitle {
-    font-size: 42px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    font-family: 'Arial Black', 'Impact', sans-serif;
-    text-transform: capitalize;
-    margin: 5px 0 10px;
-
-    color: #ffffff;
-
-    /* Black outline + red shadow */
-    text-shadow:
-        -3px -3px 0 #000,
-         3px -3px 0 #000,
-        -3px  3px 0 #000,
-         3px  3px 0 #000,
-         6px  6px 0 #e60000;
+    font-family: 'Playfair Display', serif;
+    font-size: 46px;
+    color: #f5c542;
 }
 
-/* TAGLINE */
-.header p {
-    margin: 0;
-    opacity: 0.9;
-}
-
-/* ================= NAVBAR ================= */
+/* NAV */
 .navbar {
-    background: #34495e;
+    background: #000;
     text-align: center;
+    position: sticky;
+    top: 0;
 }
 
 .navbar a {
-    color: white;
+    color: #fff;
     padding: 14px 18px;
     display: inline-block;
     text-decoration: none;
 }
 
 .navbar a:hover {
-    background: #1abc9c;
+    color: #f5c542;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 .hero {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 80px 20px;
-    color: white;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                url("images/img1.jpeg");
-    background-size: cover;
-    background-position: center;
+    background:
+        linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+        url("images/img1.jpeg") center/cover no-repeat;
 }
 
+.hero-content {
+    max-width: 900px;
+    color: #fff;
+}
+
+.hero h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+}
+
+.hero-subtext {
+    font-size: 20px;
+}
+
+/* PRICE */
 .price-banner {
-    background: #e74c3c;
+    background: crimson;
+    padding: 12px 30px;
     display: inline-block;
-    padding: 15px 30px;
-    font-size: 32px;
-    font-weight: bold;
-    border-radius: 50px;
+    font-size: 28px;
+    border-radius: 40px;
     margin: 20px 0;
 }
 
-.price-banner span {
-    color: #ffe600;
+/* BUTTONS */
+.cta-buttons a {
+    margin: 10px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
 }
 
-.offer-text {
-    font-size: 16px;
-}
+.btn-primary { background: #f5c542; color: #000; }
+.btn-secondary { background: #25d366; color: #fff; }
 
-/* ================= SECTIONS ================= */
+/* SECTION */
 .section {
-    padding: 40px 20px;
+    padding: 70px 20px;
     text-align: center;
 }
 
-.light {
-    background: #f4f4f4;
-}
+.light { background: #f6f7f9; }
 
-/* PREMIUM HEADINGS */
-.section h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
-    position: relative;
-    display: inline-block;
-    font-weight: 600;
-    color: #2c3e50;
-}
-
-.section h2::after {
-    content: "";
-    width: 60%;
-    height: 3px;
-    background: linear-gradient(90deg, #c9a227, #ffd700);
-    display: block;
-    margin: 8px auto 0;
-    border-radius: 2px;
-}
-
-/* TEXT */
-.section p {
-    max-width: 700px;
-    margin: 15px auto;
-    font-size: 17px;
-    color: #444;
-}
-
-/* FEATURES LIST */
-.section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.section ul li {
-    background: #ecf0f1;
-    margin: 10px auto;
-    padding: 10px;
-    max-width: 420px;
-}
-
-/* ================= IMAGE SLIDER ================= */
-.slider {
+/* ✅ PREMIUM GALLERY */
+.premium-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 15px;
     width: 90%;
-    max-width: 600px;
     margin: auto;
-    overflow: hidden;
 }
 
-.slider img {
+.premium-gallery img {
     width: 100%;
-    animation: slide 12s infinite;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform .4s, box-shadow .4s;
 }
 
-@keyframes slide {
-    0%   {opacity: 1;}
-    20%  {opacity: 1;}
-    40%  {opacity: 0;}
-    60%  {opacity: 1;}
-    80%  {opacity: 0;}
-    100% {opacity: 1;}
+.premium-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,.3);
 }
 
-/* ================= VIDEOS ================= */
+/* LIGHTBOX */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.9);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 35px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.lightbox .nav {
+    position: absolute;
+    top: 50%;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.lightbox .prev { left: 30px; }
+.lightbox .next { right: 30px; }
+
+/* VIDEO */
 .house-video {
     width: 90%;
-    max-width: 600px;
+    max-width: 700px;
     margin: 20px auto;
     display: block;
-    border-radius: 10px;
 }
 
-/* ================= ENQUIRY FORM ================= */
-.enquiry-form {
+/* CONTACT */
+.whatsapp-box {
     max-width: 400px;
     margin: auto;
 }
 
-.enquiry-form input,
-.enquiry-form textarea {
+.whatsapp-box input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
 }
 
-.enquiry-form button {
+.whatsapp-box button {
     width: 100%;
     padding: 12px;
-    background: #1abc9c;
-    color: white;
+    background: #25d366;
     border: none;
-    font-size: 16px;
-    cursor: pointer;
+    color: #fff;
 }
 
-.enquiry-form button:hover {
-    background: #16a085;
-}
-
-/* ================= FOOTER ================= */
+/* FOOTER */
 .footer {
-    background: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 15px;
+    background: #000;
+    color: #aaa;
+    padding: 20px;
 }
 
-/* ================= WHATSAPP BUTTON ================= */
+/* FLOAT */
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #25d366;
-    color: white;
     width: 60px;
     height: 60px;
+    background: #25d366;
+    color: #fff;
     border-radius: 50%;
-    text-align: center;
     font-size: 30px;
     line-height: 60px;
+    text-align: center;
     text-decoration: none;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-    .navbar a {
-        display: block;
-        border-bottom: 1px solid #444;
-    }
-
-    .price-banner {
-        font-size: 24px;
-    }
-
-    .subtitle {
-        font-size: 32px;
-    }
 }
